@@ -1,36 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>Cyborg</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{asset('assets/css/fontawesome.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/templatemo-cyborg-gaming.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/owl.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/animate.css')}}">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="{{asset('assets/css/flex-slide.css')}}">
-<!--
-
-TemplateMo 579 Cyborg Gaming
-
-https://templatemo.com/tm-579-cyborg-gaming
-
--->
-  </head>
-
-<body>
+@extends('layouts.layout')
+@section('title','GAME$TORE')
+@section('content')
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -46,41 +16,7 @@ https://templatemo.com/tm-579-cyborg-gaming
   <!-- ***** Preloader End ***** -->
 
   <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="/" class="logo">
-                        <img src="{{asset('storage/images/logo.png')}}" alt="">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Search End ***** -->
-                    <div class="search-input">
-                      <form id="search" action="#">
-                        <input type="text" placeholder="Pesquisa" id='searchText' name="searchKeyword" onkeypress="handle" />
-                        <i class="fa fa-search"></i>
-                      </form>
-                    </div>
-                    <!-- ***** Search End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                        <li><a href="/" class="active">início</a></li>
-                        <li><a href="/jogos">Jogos</a></li>
-                        <li><a href="/detalhes">Detalhes</a></li>
-                        <li><a href="/streams">Streams</a></li>
-                        <li><a href="/perfil">Perfil <img src="{{asset('storage/images/profile-header.jpg')}}" alt=""></a></li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
-        </div>
-    </div>
-  </header>
+  <x-nav/>
   <!-- ***** Header Area End ***** -->
 
   <div class="container">
@@ -258,31 +194,10 @@ https://templatemo.com/tm-579-cyborg-gaming
     </div>
   </div>
   
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Todos os direitos reservados.
-            <br>Copyright © 2022<br><a href="/">GAME$TORE</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <x-footer/>
 
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="{{asset('assets/js/jquery.min.js')}}"></script>
-  <script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-
-  <script src="{{asset('assets/js/isotope.min.js')}}"></script>
-  <script src="{{asset('assets/js/owl-carousel.js')}}"></script>
-  <script src="{{asset('assets/js/tabs.js')}}"></script>
-  <script src="{{asset('assets/js/popup.js')}}"></script>
-  <script src="{{asset('assets/js/custom.js')}}"></script>
-
-
-  </body>
-
-</html>
+  
+  @endsection
